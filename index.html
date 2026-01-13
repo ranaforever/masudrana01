@@ -3,31 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Masud Rana | Content Specialist & Quality Analyst</title>
-    <meta name="description" content="Professional portfolio of Masud Rana, an experienced Content Specialist and Quality Analyst dedicated to helping brands grow with quality content.">
+    <title>Masud Rana | Content Strategy & Quality Architect</title>
+    <meta name="description" content="Portfolio of Masud Rana - Architecting digital integrity through content moderation and QA excellence.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: #22d3ee;
+            --secondary: #a855f7;
+            --bg: #020617;
+        }
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0f172a;
-            color: #f8fafc;
-        }
-        h1, h2, h3, .font-heading {
             font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg);
+            color: #f8fafc;
+            overflow-x: hidden;
         }
+        .font-syne { font-family: 'Syne', sans-serif; }
+        
+        /* Aurora Animation */
+        .aurora {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            filter: blur(100px);
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        .aurora-blob {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+        }
+        .blob-1 { background: var(--primary); top: -100px; left: -100px; animation: move 20s infinite alternate; }
+        .blob-2 { background: var(--secondary); bottom: -100px; right: -100px; animation: move 25s infinite alternate-reverse; }
+        
+        @keyframes move {
+            from { transform: translate(0, 0) scale(1); }
+            to { transform: translate(100px, 100px) scale(1.2); }
+        }
+
         .glass {
-            background: rgba(15, 23, 42, 0.8);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
-        .gradient-text {
-            background: linear-gradient(135deg, #60a5fa 0%, #2563eb 100%);
+        
+        .text-gradient {
+            background: linear-gradient(to right, #fff, #94a3b8);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #334155; }
     </style>
 <script type="importmap">
 {
@@ -42,6 +80,10 @@
 </script>
 </head>
 <body>
+    <div class="aurora">
+        <div class="aurora-blob blob-1"></div>
+        <div class="aurora-blob blob-2"></div>
+    </div>
     <div id="root"></div>
     <script type="module" src="index.tsx"></script>
 </body>
