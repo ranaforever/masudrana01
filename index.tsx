@@ -162,7 +162,7 @@ const HudProfile = () => {
       >
         <img 
           src="https://i.ibb.co/jZxd3DGg/image-1-1.jpg" 
-          alt="Masud Rana" 
+          alt="Masud Rana - Professional Quality Expert & Content Moderator Profile" 
           className="w-full h-full object-cover object-top grayscale-[10%] group-hover:grayscale-0 transition-all duration-1000"
         />
 
@@ -245,8 +245,8 @@ const ContactForm = () => {
         <div className="w-20 h-20 rounded-full bg-cyan-500/20 flex items-center justify-center text-cyan-400 mb-4 animate-bounce">
           <CheckCircle2 size={40} />
         </div>
-        <h3 className="text-2xl font-black uppercase tracking-tighter">Transmission Complete</h3>
-        <p className="text-gray-400 max-w-sm font-medium">Your message has been securely sent to office.masud7262@gmail.com. I will respond shortly.</p>
+        <h3 className="text-2xl font-black uppercase tracking-tighter text-white">Transmission Complete</h3>
+        <p className="text-gray-400 max-w-sm font-medium">Your request has been securely sent. As a <span className="text-white">Quality Expert</span>, I ensure all communications are handled with priority.</p>
         <button 
           onClick={() => setFormState('idle')}
           className="text-xs font-black text-cyan-400 uppercase tracking-widest hover:underline pt-4"
@@ -264,7 +264,7 @@ const ContactForm = () => {
     >
       <div className="grid md:grid-cols-2 gap-8">
         <div className="space-y-2">
-          <label className="text-[10px] font-black text-gray-500 uppercase tracking-widest ml-1">Your Name</label>
+          <label className="text-[10px] font-black text-gray-500 uppercase tracking-widest ml-1">Full Name</label>
           <input 
             required
             type="text" 
@@ -287,10 +287,10 @@ const ContactForm = () => {
         </div>
       </div>
       <div className="space-y-2">
-        <label className="text-[10px] font-black text-gray-500 uppercase tracking-widest ml-1">How can I help you?</label>
+        <label className="text-[10px] font-black text-gray-500 uppercase tracking-widest ml-1">Message for Masud Rana</label>
         <textarea 
           required
-          placeholder="TYPE YOUR MESSAGE HERE..." 
+          placeholder="HOW CAN I HELP YOU WITH QUALITY ANALYSIS OR CONTENT SAFETY?" 
           rows={5} 
           value={formData.message}
           onChange={(e) => setFormData({...formData, message: e.target.value})}
@@ -301,12 +301,12 @@ const ContactForm = () => {
         disabled={formState === 'sending'}
         className={`w-full py-6 rounded-2xl font-black text-xs uppercase tracking-widest flex items-center justify-center gap-4 transition-all hover:scale-[1.02] shadow-2xl ${formState === 'sending' ? 'bg-slate-700 cursor-not-allowed' : 'bg-blue-600 hover:bg-blue-700'}`}
       >
-        {formState === 'sending' ? 'Sending Data...' : 'Send Message'} 
+        {formState === 'sending' ? 'Transmitting...' : 'Send Message'} 
         <Send size={20} className={formState === 'sending' ? 'animate-pulse' : ''} />
       </button>
       
       {formState === 'error' && (
-        <p className="text-red-400 text-[10px] font-bold text-center uppercase tracking-widest">Error transmitting data. Please check connection or try again.</p>
+        <p className="text-red-400 text-[10px] font-bold text-center uppercase tracking-widest">Error transmitting data. Try again.</p>
       )}
     </form>
   );
@@ -342,10 +342,10 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: 'home' },
+    { name: 'Masud Rana', href: 'home' },
     { name: 'About', href: 'about' },
-    { name: 'Experience', href: 'experience' },
-    { name: 'Skills', href: 'skills' },
+    { name: 'QA Experience', href: 'experience' },
+    { name: 'Expertise', href: 'skills' },
     { name: 'Certificates', href: 'certificates' },
     { name: 'Portfolio', href: 'portfolio' },
     { name: 'Contact', href: 'contact' },
@@ -387,11 +387,11 @@ const Navbar = () => {
             onClick={(e) => handleNavClick(e, 'contact')}
             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full text-[10px] font-black uppercase transition-all shadow-xl shadow-blue-500/20 active:scale-95"
           >
-            Hire Me
+            Hire Expert
           </a>
         </div>
 
-        <button className="md:hidden p-2 text-white" onClick={() => setIsOpen(!isOpen)}><Menu size={24} /></button>
+        <button className="md:hidden p-2 text-white" aria-label="Toggle Menu" onClick={() => setIsOpen(!isOpen)}><Menu size={24} /></button>
       </div>
 
       <AnimatePresence>
@@ -433,26 +433,26 @@ const App = () => {
     <div className="min-h-screen bg-[#020617] text-slate-100 selection:bg-cyan-500/30 overflow-x-hidden">
       <Navbar />
 
-      {/* Hero Section */}
+      {/* Hero Section - 1st Page Ranking H1 */}
       <section id="home" className="relative min-h-screen flex items-center pt-20">
         <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }} className="z-10 text-center lg:text-left">
             <div className="flex items-center justify-center lg:justify-start gap-2 mb-6">
               <span className="w-8 h-[2px] bg-blue-500"></span>
-              <span className="text-blue-400 font-bold uppercase tracking-[0.2em] text-[10px]">Open to Opportunities</span>
+              <span className="text-blue-400 font-bold uppercase tracking-[0.2em] text-[10px]">Active Quality Analyst Portfolio</span>
             </div>
             <h1 className="text-5xl md:text-8xl font-black mb-8 leading-[1.1] tracking-tighter uppercase">
-              Quality <br /> <span className="text-blue-500">Excellence</span> <br /> Expert.
+              Masud Rana: <br /> <span className="text-blue-500">Quality Expert</span> <br /> & Specialist.
             </h1>
             <p className="text-gray-400 text-lg md:text-xl mb-12 max-w-lg mx-auto lg:mx-0 leading-relaxed font-medium">
-              I'm <span className="text-white font-bold">Masud Rana</span>. A Content Specialist & Quality Analyst focused on high-precision moderation and streamlined QA frameworks.
+              I am <span className="text-white font-bold">Masud Rana</span>, an industry-leading <span className="text-white font-bold">Content Moderator</span> and <span className="text-white font-bold">Quality Analyst</span> specializing in <span className="text-blue-400 font-bold">Content Safety</span> and high-standard digital compliance frameworks.
             </p>
             <div className="flex flex-wrap justify-center lg:justify-start gap-5">
               <a href="#contact" onClick={(e) => scrollToSection(e, 'contact')} className="px-10 py-5 bg-blue-600 hover:bg-blue-700 rounded-2xl font-black text-xs uppercase tracking-widest flex items-center gap-3 transition-all hover:translate-y-[-4px] shadow-2xl shadow-blue-500/30">
-                Contact Me <ChevronRight size={18} />
+                Contact Masud <ChevronRight size={18} />
               </a>
               <a href={CV_LINK} target="_blank" rel="noopener noreferrer" className="px-10 py-5 bg-white/5 hover:bg-white/10 border border-white/10 rounded-2xl font-black text-xs uppercase tracking-widest flex items-center gap-3 transition-all backdrop-blur-sm">
-                Download CV <FileText size={18} />
+                Expert CV <FileText size={18} />
               </a>
             </div>
           </motion.div>
@@ -461,34 +461,34 @@ const App = () => {
         </div>
       </section>
 
-      {/* About Section */}
-      <Section id="about" title="Professional Bio" className="bg-slate-900/30">
+      {/* About Section - Keyword Rich */}
+      <Section id="about" title="Quality Analyst Bio" className="bg-slate-900/30">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           <div className="space-y-8">
-            <h3 className="text-4xl font-black text-white leading-tight uppercase">Architecting <br /><span className="text-blue-500">Digital Safety.</span></h3>
-            <p className="text-gray-400 text-lg leading-relaxed">Based on my experience across Singapore and Bangladesh, I specialize in navigating complex digital landscapes. I combine policy expertise with operational efficiency to maintain safe and high-quality online environments.</p>
+            <h3 className="text-4xl font-black text-white leading-tight uppercase">Mastering <br /><span className="text-blue-500">Content Safety.</span></h3>
+            <p className="text-gray-400 text-lg leading-relaxed">As a <span className="text-white">Quality Analyst</span> (and specialized <span className="text-white">Quality Analist</span>) with global experience, <span className="text-white font-bold">Masud Rana</span> delivers elite <span className="text-white">content moderation</span> services. My role as a <span className="text-blue-400">Quality Expert</span> is to architect safe digital spaces through rigorous <span className="text-white">Content Safety</span> standards.</p>
             <div className="grid grid-cols-2 gap-4">
-              <div className="flex items-center gap-4 p-5 bg-slate-800/50 rounded-2xl border border-white/5"><Globe className="text-blue-500" /> <span className="font-bold text-gray-200 text-xs uppercase tracking-widest">Global Reach</span></div>
-              <div className="flex items-center gap-4 p-5 bg-slate-800/50 rounded-2xl border border-white/5"><Zap className="text-blue-500" /> <span className="font-bold text-gray-200 text-xs uppercase tracking-widest">Optimization</span></div>
+              <div className="flex items-center gap-4 p-5 bg-slate-800/50 rounded-2xl border border-white/5"><Globe className="text-blue-500" /> <span className="font-bold text-gray-200 text-xs uppercase tracking-widest text-center">Global Content Moderator</span></div>
+              <div className="flex items-center gap-4 p-5 bg-slate-800/50 rounded-2xl border border-white/5"><ShieldCheck className="text-blue-500" /> <span className="font-bold text-gray-200 text-xs uppercase tracking-widest text-center">Safety Expert</span></div>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-6">
             <div className="p-8 rounded-[40px] bg-slate-800/40 border border-white/5 hover:border-blue-500/40 transition-all text-center">
-              <ShieldCheck className="text-blue-500 mb-4 mx-auto" size={40} />
-              <h4 className="text-xl font-bold mb-2 uppercase tracking-tighter">Policy Mastery</h4>
-              <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">100% compliance</p>
+              <Search className="text-blue-500 mb-4 mx-auto" size={40} />
+              <h4 className="text-xl font-bold mb-2 uppercase tracking-tighter">Content Safety</h4>
+              <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Digital Integrity</p>
             </div>
             <div className="p-8 rounded-[40px] bg-slate-800/40 border border-white/5 hover:border-purple-500/40 transition-all text-center mt-12">
               <BarChart3 className="text-purple-500 mb-4 mx-auto" size={40} />
-              <h4 className="text-xl font-bold mb-2 uppercase tracking-tighter">Efficiency</h4>
-              <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">60% faster cycles</p>
+              <h4 className="text-xl font-bold mb-2 uppercase tracking-tighter">Quality Expert</h4>
+              <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">Process Analysis</p>
             </div>
           </div>
         </div>
       </Section>
 
-      {/* Experience Section */}
-      <Section id="experience" title="Work History">
+      {/* Experience Section - Semantic H2 */}
+      <Section id="experience" title="Content Moderation Career">
         <div className="max-w-4xl mx-auto space-y-16">
           {EXPERIENCE.map((exp, idx) => (
             <motion.div key={idx} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="group relative flex flex-col md:flex-row gap-8 items-start">
@@ -514,7 +514,7 @@ const App = () => {
       </Section>
 
       {/* Skills Section */}
-      <Section id="skills" title="Core Expertise" className="bg-slate-900/30">
+      <Section id="skills" title="Quality Analyst Skills" className="bg-slate-900/30">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {SKILLS.map((skill, idx) => (
             <motion.div key={idx} whileHover={{ y: -8 }} className="p-10 bg-slate-800/30 rounded-[40px] border border-white/5 group">
@@ -526,7 +526,7 @@ const App = () => {
                 <motion.div initial={{ width: 0 }} whileInView={{ width: `${skill.level}%` }} transition={{ duration: 1.5 }} className="h-full bg-blue-600 rounded-full" />
               </div>
               <div className="flex justify-between items-center text-[10px] text-gray-500 font-black uppercase tracking-widest">
-                <span>Proficiency</span> <span className="text-blue-400">{skill.level}%</span>
+                <span>Expertise Level</span> <span className="text-blue-400">{skill.level}%</span>
               </div>
             </motion.div>
           ))}
@@ -534,7 +534,7 @@ const App = () => {
       </Section>
 
       {/* Certifications Section */}
-      <Section id="certificates" title="Certifications">
+      <Section id="certificates" title="Professional Certifications">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {CERTIFICATIONS.map((cert, idx) => (
             <motion.div 
@@ -542,7 +542,6 @@ const App = () => {
               whileHover={{ y: -10, scale: 1.02 }}
               className="relative p-10 bg-slate-900/50 backdrop-blur-xl rounded-[45px] border border-white/5 group overflow-hidden shadow-2xl"
             >
-              {/* Card HUD Decoration */}
               <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-20 transition-opacity">
                 <Medal size={80} />
               </div>
@@ -554,7 +553,7 @@ const App = () => {
                 <div>
                   <div className="text-[10px] text-blue-500/60 font-black tracking-widest uppercase mb-1 flex items-center gap-2">
                     <div className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></div>
-                    Verified Achievement
+                    Quality Expert Verification
                   </div>
                   <h4 className="font-black text-xl uppercase tracking-tighter text-white leading-none">{cert.issuer}</h4>
                 </div>
@@ -569,6 +568,7 @@ const App = () => {
                   href={cert.link} 
                   target="_blank" 
                   rel="noopener noreferrer"
+                  aria-label={`Verify Masud Rana's Quality Analyst certification from ${cert.issuer}`}
                   className="px-6 py-3 bg-blue-600/10 hover:bg-blue-600 text-blue-400 hover:text-white rounded-xl text-[9px] font-black uppercase tracking-widest transition-all border border-blue-600/20 flex items-center gap-2 shadow-lg"
                 >
                   Verify <ExternalLink size={12} />
@@ -580,19 +580,19 @@ const App = () => {
       </Section>
 
       {/* Portfolio Section */}
-      <Section id="portfolio" title="Featured Work">
+      <Section id="portfolio" title="Quality Analyst Portfolio">
         <div className="grid lg:grid-cols-3 gap-10">
           {PROJECTS.map((project) => (
             <motion.div key={project.title} whileHover={{ y: -10 }} className="group rounded-[50px] overflow-hidden bg-slate-900 border border-white/5 flex flex-col h-full shadow-2xl">
               <div className="h-64 overflow-hidden relative">
-                <img src={project.img} alt={project.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                <img src={project.img} alt={`Masud Rana - ${project.title} Case Study`} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute top-6 left-6 px-4 py-1.5 bg-blue-600/90 backdrop-blur-md rounded-full text-[8px] font-black uppercase tracking-widest text-white">{project.category}</div>
               </div>
               <div className="p-10 flex flex-col flex-grow">
                 <h4 className="text-2xl font-black mb-4 group-hover:text-blue-400 transition-colors uppercase tracking-tight">{project.title}</h4>
                 <p className="text-gray-400 text-xs mb-8 leading-relaxed flex-grow">{project.desc}</p>
                 <div className="pt-6 border-t border-white/5 mt-auto">
-                  <a href="#" className="inline-flex items-center text-[10px] font-black text-blue-500 uppercase tracking-widest gap-2">Read Case Study <ChevronRight size={14} /></a>
+                  <span className="inline-flex items-center text-[10px] font-black text-blue-500 uppercase tracking-widest gap-2">Project Success <ChevronRight size={14} /></span>
                 </div>
               </div>
             </motion.div>
@@ -600,27 +600,27 @@ const App = () => {
         </div>
       </Section>
 
-      {/* Contact Section */}
-      <Section id="contact" title="Get In Touch">
+      {/* Contact Section - Lead Generation SEO */}
+      <Section id="contact" title="Hire Masud Rana">
         <div className="grid lg:grid-cols-12 gap-16 items-start">
           <div className="lg:col-span-5 space-y-10">
             <div>
-              <h3 className="text-4xl font-black mb-6 uppercase tracking-tighter">Let's discuss <br /> <span className="text-blue-500">Excellence.</span></h3>
-              <p className="text-gray-400 text-lg leading-relaxed">I'm available for professional consultation on content strategy, moderation quality, and QA process optimization.</p>
+              <h3 className="text-4xl font-black mb-6 uppercase tracking-tighter">Hire Your <br /> <span className="text-blue-500">Quality Expert.</span></h3>
+              <p className="text-gray-400 text-lg leading-relaxed">Collaborate with <span className="text-white">Masud Rana</span> for elite <span className="text-white">content moderation</span>, high-precision quality audits, and professional <span className="text-white">Content Safety</span> consulting.</p>
             </div>
             <div className="space-y-4">
               <a href="mailto:office.masud7262@gmail.com" className="flex items-center gap-6 p-6 rounded-[30px] bg-slate-800/20 hover:bg-slate-800/50 transition-all border border-transparent hover:border-slate-700 group">
                 <div className="w-14 h-14 rounded-2xl bg-red-500/10 flex items-center justify-center text-red-400 group-hover:bg-red-500 group-hover:text-white transition-all"><Mail size={24} /></div>
-                <div><p className="text-[10px] text-gray-500 font-black uppercase tracking-widest mb-1">Email</p><p className="font-bold text-lg">office.masud7262@gmail.com</p></div>
+                <div><p className="text-[10px] text-gray-500 font-black uppercase tracking-widest mb-1">Direct Mail</p><p className="font-bold text-lg">office.masud7262@gmail.com</p></div>
               </a>
-              <a href="https://wa.me/8801625989806" target="_blank" className="flex items-center gap-6 p-6 rounded-[30px] bg-slate-800/20 hover:bg-slate-800/50 transition-all border border-transparent hover:border-slate-700 group">
+              <a href="https://wa.me/8801625989806" target="_blank" rel="noopener" className="flex items-center gap-6 p-6 rounded-[30px] bg-slate-800/20 hover:bg-slate-800/50 transition-all border border-transparent hover:border-slate-700 group">
                 <div className="w-14 h-14 rounded-2xl bg-green-500/10 flex items-center justify-center text-green-500 group-hover:bg-green-500 group-hover:text-white transition-all"><MessageCircle size={24} /></div>
-                <div><p className="text-[10px] text-gray-500 font-black uppercase tracking-widest mb-1">WhatsApp</p><p className="font-bold text-lg">+880 1625 989806</p></div>
+                <div><p className="text-[10px] text-gray-500 font-black uppercase tracking-widest mb-1">WhatsApp Masud</p><p className="font-bold text-lg">+880 1625 989806</p></div>
               </a>
             </div>
             <div className="flex gap-4 pt-4">
-              <motion.a href="https://www.linkedin.com/in/ranaforever/" target="_blank" whileHover={{ scale: 1.1, rotate: 5 }} className="w-14 h-14 bg-slate-800 rounded-2xl flex items-center justify-center hover:bg-[#0077b5] transition-all"><Linkedin size={24} /></motion.a>
-              <motion.a href="https://www.facebook.com/ranaforever46/" target="_blank" whileHover={{ scale: 1.1, rotate: -5 }} className="w-14 h-14 bg-slate-800 rounded-2xl flex items-center justify-center hover:bg-[#1877f2] transition-all"><Facebook size={24} /></motion.a>
+              <motion.a href="https://www.linkedin.com/in/ranaforever/" target="_blank" rel="noopener" whileHover={{ scale: 1.1, rotate: 5 }} className="w-14 h-14 bg-slate-800 rounded-2xl flex items-center justify-center hover:bg-[#0077b5] transition-all" aria-label="Masud Rana LinkedIn"><Linkedin size={24} /></motion.a>
+              <motion.a href="https://www.facebook.com/ranaforever46/" target="_blank" rel="noopener" whileHover={{ scale: 1.1, rotate: -5 }} className="w-14 h-14 bg-slate-800 rounded-2xl flex items-center justify-center hover:bg-[#1877f2] transition-all" aria-label="Masud Rana Facebook"><Facebook size={24} /></motion.a>
             </div>
           </div>
           
@@ -633,11 +633,11 @@ const App = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-10">
             <div>
               <a href="#home" onClick={(e) => scrollToSection(e, 'home')} className="text-3xl font-black tracking-tighter uppercase mb-4 block">MASUD<span className="text-blue-500">RANA</span></a>
-              <p className="text-gray-500 text-xs font-bold uppercase tracking-widest">© {new Date().getFullYear()} Professional Portfolio</p>
+              <p className="text-gray-500 text-xs font-bold uppercase tracking-widest">© {new Date().getFullYear()} Quality Expert | Content Safety & Moderation Analyst Portfolio</p>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-              <span className="text-gray-500 text-[8px] font-black uppercase tracking-widest">Active Status: Globally Available</span>
+              <span className="text-gray-500 text-[8px] font-black uppercase tracking-widest">Status: Masud Rana is Available for Global Quality Analyst Projects</span>
             </div>
           </div>
         </div>
@@ -662,6 +662,7 @@ const BackToTop = () => {
           initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.5 }}
           onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
           className="fixed bottom-10 right-10 z-[100] w-14 h-14 bg-white text-slate-950 rounded-2xl flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all"
+          aria-label="Back to top of Masud Rana Portfolio"
         >
           <ArrowUp size={24} />
         </motion.button>
